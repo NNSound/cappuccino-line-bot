@@ -1,5 +1,11 @@
 const { groupBitches, groupChen } = process.env;
 
+const Capu = {
+  name: 'Capu',
+  rule: /^卡布/,
+  cons: [Bitch, YesOrNo, Echo, GoodMorning, ShutUp],
+};
+
 const Penguin = {
   name: 'Penguin',
   rule: /72/,
@@ -65,12 +71,6 @@ const YesOrNo = {
     const randomBool = Math.floor(Math.random() * 1000) % 2;
     await context.sendText(randomBool ? '好！' : '不好吧...');
   },
-};
-
-const Capu = {
-  name: 'Capu',
-  rule: /^卡布/,
-  cons: [Bitch, YesOrNo, Echo, GoodMorning, ShutUp],
 };
 
 const Log = {
